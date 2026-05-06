@@ -1,0 +1,16 @@
+-- Creating the Students table to store basic info [12, 17]
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    FullName VARCHAR(100),
+    Email VARCHAR(100)
+);
+
+-- Creating the Performance table to store quiz and assignment results [12, 15]
+CREATE TABLE Performance (
+    ResultID INT PRIMARY KEY IDENTITY(1,1),
+    StudentID INT,
+    QuizScore DECIMAL(5,2),
+    ActivityLevel VARCHAR(50),
+    TopicName VARCHAR(100),
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID) -- Relational link [16]
+);
