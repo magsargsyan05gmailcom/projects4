@@ -1,0 +1,17 @@
+public class RecommendationEngine {
+
+    /**
+     * Analyzes the student's quiz score and returns a personalized recommendation.
+     * Based on rule-based logic to ensure transparency and simplicity.
+     */
+    public String analyzePerformance(double quizScore, String topicName) {
+        double threshold = 60.0; // Predefined condition for identification [1]
+
+        if (quizScore < threshold) {
+            return "Recommendation for " + topicName + ": Your score is below " + threshold + "%. " +
+                   "Please review the core concepts of this topic and complete additional practice exercises.";
+        } else {
+            return "Great job in " + topicName + "! You have mastered this area. Continue with the next module.";
+        }
+    }
+}
