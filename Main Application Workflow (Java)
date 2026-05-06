@@ -1,0 +1,15 @@
+public class MainApp {
+    public static void main(String[] args) {
+        // 1. Retrieve Data (Simulated for this highlight)
+        double studentScore = 55.0; 
+        String topic = "Database Normalization";
+
+        // 2. Process via Recommendation Engine [19]
+        RecommendationEngine engine = new RecommendationEngine();
+        String result = engine.analyzePerformance(studentScore, topic);
+
+        // 3. Display Output [19]
+        System.out.println("--- Student Performance Analysis ---");
+        System.out.println(result);
+    }
+}
